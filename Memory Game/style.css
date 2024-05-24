@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    background-color: #020404;
+    color: white;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.boxes {
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/706f7ff0-a28a-4a69-a54d-34476615f79d/dg77bx5-74ccfbda-77cc-4221-a83b-8a4f8e685d26.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzcwNmY3ZmYwLWEyOGEtNGE2OS1hNTRkLTM0NDc2NjE1Zjc5ZFwvZGc3N2J4NS03NGNjZmJkYS03N2NjLTQyMjEtYTgzYi04YTRmOGU2ODVkMjYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Er4bQMgTKMresRsGmXxV7qHUHZMVVvEXlHou3CEofCY");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+.grid {
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2em;
+}
+.cards{
+    height: 100%;
+    width: 100%;
+    background: white;
+    transition: 0.5s;
+    visibility: hidden;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 100%;
+}
+.winText {
+    font-size: larger;
+    color: cornflowerblue;
+}
+.user {
+    margin-bottom: 1em;
+}
+input , button{
+    outline: none;
+    border: none;
+    height: 3em;
+    border-radius: 0.5em;
+    background: transparent;
+    font-family: "Poetsen One", sans-serif;
+}
+input {
+    border-bottom: 1px solid white;
+    color: white;
+}
+button {
+    background: white;
+    color: black;
+    padding: 0px 1em;
+}

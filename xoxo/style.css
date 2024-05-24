@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid {
+    height: 52.6vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #332941;
+}
+.content {
+    background-color: #3B3486;
+    display: grid;
+    height: 27vmax;
+    width: 27vmax;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 1vmax;
+    padding: 1vmax;
+    border-radius: 1vmax;
+}
+.create {
+    border: 4px solid #864AF9;
+    border-radius: 1vmax;
+    box-shadow: 0 0 10px #864AF9, inset 0 0 10px #864AF9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F8E559;
+    font-size: 4vmax;
+    font-family: system-ui;
+    text-shadow: 0 0 6px #F8E559;
+}
+.startBtn {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+start {
+    background-color: crimson;
+    color: #EFECEC;
+    padding: 0.5vmax;
+    border-radius: 9px;
+    box-shadow: 0 0 10px crimson, inset 0 0 10px crimson;
+    cursor: pointer;
+}
+.choose-up , .choose-mid ,.select {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+val {
+    background-color: crimson;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bolder;
+    margin: 16px;
+    cursor: pointer;
+}

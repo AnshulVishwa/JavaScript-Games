@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+.selection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+}
+.image {
+    height: 12em;
+}
+.rock, .paper, .scissor {
+    border: 2px solid transparent;
+    padding: 1em;
+    border-radius: 1em;
+}
+.rock:hover, .paper:hover, .scissor:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}
+.score,.play {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    font-size: x-large;
+}
+.playBox {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.play{
+    width: 100%;
+    font-size: large;
+}
+.time {
+    height: 1.5em;
+}
