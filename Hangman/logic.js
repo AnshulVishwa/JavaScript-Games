@@ -36,7 +36,7 @@ async function getData( num = 0 , score = 0 , prev = false , inc = 0 ){
 
         if( num == 1 ) ""
         else previous.textContent = ( prev ) ? "Your Previous Answer in Correct" : "Your Previous Answer in Incorrect"
-        upper.insertBefore( totalQuestionsAttemped , document.querySelector(".question") )
+        document.querySelector(".question").prepend( totalQuestionsAttemped )
         lower.append( previous , YourScore)
 
         for( let i = 0 ; i < 4 ; i++ ){
@@ -44,22 +44,17 @@ async function getData( num = 0 , score = 0 , prev = false , inc = 0 ){
             create.classList.add(`answer${i}`)
             create.classList.add(`answer`)
             let text = ""
-            let a = ""
             switch(i){
                 case 0 : text = data[rand].A
-                            a = "A"
                 break;
                 case 1 : text = data[rand].B
-                            a = "B"
                 break;
                 case 2 : text = data[rand].C
-                            a = "C"
                 break;
-                case 3 : text = data[rand].D
-                            a = "D"
+                case 3 : text = data[rand].D                
                 break;
             }
-            create.textContent = `${a}.${text}`
+            create.textContent = `${text}`
             ansBox.appendChild(create)
             create.addEventListener( "click" , ()=>{
                 if( click ){
@@ -69,7 +64,7 @@ async function getData( num = 0 , score = 0 , prev = false , inc = 0 ){
                         score = score+1
                         YourScore.textContent = `Score ~ ${score}`
                         document.querySelectorAll(".answer").forEach( ( each ) => ansBox.removeChild(each) )
-                        upper.removeChild(totalQuestionsAttemped)
+                        document.querySelector(".question").removeChild(totalQuestionsAttemped)
                         lower.removeChild(YourScore)
                         lower.removeChild(previous)
                         getData( num , score , true , inc)
@@ -94,7 +89,7 @@ async function getData( num = 0 , score = 0 , prev = false , inc = 0 ){
                                 break;
                         }
 
-                        upper.removeChild(totalQuestionsAttemped)
+                        document.querySelector(".question").removeChild(totalQuestionsAttemped)
                         lower.removeChild(YourScore)
                         lower.removeChild(previous)
                         getData( num , score , false , inc)
