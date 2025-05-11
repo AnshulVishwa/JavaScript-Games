@@ -73,7 +73,7 @@ let all = true
             allBoxes.forEach( (each)=>{
                 myArr = []
                 each.addEventListener( "click" ,  ()=>{
-    
+                    if( !playGame ) return;
                     val = val == player1 ? player2 : player1
                     each.innerHTML = val
                     myArr.push(each.id)
@@ -122,6 +122,7 @@ let all = true
                     }
 
                     function endGame(a,b,c,name){
+                        playGame = false;
                         let body = document.querySelector(".container-fluid")
                         let drawBox = document.querySelector(".drawBox")
                         body.removeChild(drawBox)
